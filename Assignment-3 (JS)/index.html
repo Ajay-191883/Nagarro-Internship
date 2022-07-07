@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon Website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1920px-International_Pok%C3%A9mon_logo.svg.png"
+        width="250px"
+        alt="Pokemon Image"
+      />
+      <h1>Pokemon Website</h1>
+    </header>
+    <main>
+      <p>
+        Pokémon, electronic game series from Nintendo that debuted in Japan in
+        February 1996 as Pokémon Green and Pokémon Red. The franchise later
+        became wildly popular in the United States and around the world. The
+        series, originally produced for the company’s Game Boy line of handheld
+        consoles, was introduced in 1998 to the United States with two titles,
+        known to fans as Red and Blue. In the games, players assume the role of
+        Pokémon trainers, obtaining cartoon monsters and developing them to
+        battle other Pokémon. Pokémon became one of the most successful video
+        game franchises in the world, second only to Nintendo’s Super Mario
+        Bros.
+      </p>
+      <div class="container">
+        <img src="./img/piku.png" alt="Pokemon Image" />
+        <div>
+          <p>Here is Pikachu</p>
+          Pikachu, a yellow mouselike creature, is the undisputed face of
+          Pokémon and helped the series become a worldwide phenomenon. Pokémon
+          inspired a cartoon series, movies, books, a toy line, sequels,
+          spin-offs, a clothing line, and a popular trading-card game. In spite
+          of a friendly interface and little violence, Pokémon has not been
+          without controversy, however. In 1999 the parents of two nine-year-old
+          boys sued Nintendo, stating that the Pokémon card game had caused the
+          children to develop gambling problems and likening the trading-card
+          craze to an illegal lottery. Religious groups that discount the theory
+          of evolution also targeted Pokémon, for showing Pokémon evolving into
+          new creatures.
+        </div>
+      </div>
+      <div class="container">
+        <div>
+          <p>Watch on Youtube</p>
+          Beginning in 2006, Pokémon video-game titles were produced exclusively
+          for a new handheld console, the Nintendo DS, instead of the Game Boy,
+          which was soon discontinued. In 2013 Pokémon X and Pokémon Y debuted
+          on the Nintendo 3DS, which employed stereoscopic technology. The
+          mobile application Pokémon GO was a blockbuster success upon its
+          release in 2016. Developed by Niantic Labs, a former division of
+          Google, the game used GPS data and the mobile device’s camera to
+          create an “augmented reality” that allowed users to capture Pokémon
+          from real-life locations.
+        </div>
+        <video controls src="./img/poke.mp4" alt=""></video>
+      </div>
+      <div class="iframe-container">
+        <div>
+          <h1>You like reading...</h1>
+          <iframe
+            width="942"
+            height="530"
+            src="https://en.wikipedia.org/wiki/Pok%C3%A9mon_(video_game_series)"
+            frameborder="0"
+          ></iframe>
+        </div>
+      </div>
+      <div style="margin-top: 30px; text-align: center">
+        <h1 style="margin-bottom: 20px">Meet All Characters...</h1>
+        <p>
+          Gotta catch 'em all! When Pokémon arrived on the scene in 1995, it
+          totally changed the way nerds played card games forever. Pokémon is an
+          awesome game, TV series, and and video game franchise based on
+          fictional creatures called "Pokémon" that humans can capture, trade,
+          and train to fight for sport. This list features every character from
+          the Pokémon video game series. We don't have any of the characters
+          from the manga series on here, but we're sure you'll be familiar with
+          all the characters if you play the games.
+
+          <br /><br />
+          Some Pokémon characters names are a little bit bizarre, but we're
+          hoping that this complete list of Pokémon names and pictures will
+          clear up any confusion about Pokémon characters with names like
+          "Snorlax" and "Mew." This complete list of Pokémon features famous
+          characters, like Pikachu, Charizard, and other colorful Pokémon. If
+          you're more interested in the best Pokémon, then check out this list
+          of the best Legendary and Shiny Pokémon.
+        </p>
+
+        <button id="seeBtn" class="btn">See all Characters</button>
+      </div>
+
+      <div class="contact">
+        <h1>Any Doubt or Feedback</h1>
+        <div class="contact-container">
+          <div class="form-container">
+            <form action="./index.php">
+              <label for="yourname">Your Name: </label>
+              <input type="text" placeholder="Enter your name" />
+              <br />
+              <br />
+              <label for="youremail">Your Email: </label>
+              <input type="email" placeholder="Enter your email" />
+              <br />
+              <br />
+              <label for="gender">Select Gender: </label>
+              <select name="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+              <br />
+              <br />
+              <label for="Feedback">Feedback</label><br />
+              <textarea name="feedback" cols="30" rows="10"></textarea><br />
+              <input class="btn" type="submit" name="submit" />
+            </form>
+          </div>
+          <div class="img-container">
+            <img src="./img/contact.PNG" alt="" />
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <strong style="font-size: 28px">Made by Ajay Kumar</strong>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
