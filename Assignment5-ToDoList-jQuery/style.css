@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+  font-family: verdana;
+  text-transform: capitalize;
+}
+body {
+  min-height: 100vh;
+
+  background: rgb(63, 94, 251);
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+}
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body h1 {
+  text-align: center;
+  margin: 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: yellow;
+  font-size: 56px;
+}
+.container {
+  height: 450px;
+  width: 320px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 5 px 10px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  overflow-y: auto;
+}
+#input {
+  height: 50px;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background: rgb(0, 0, 0);
+  color: #fff;
+  padding: 0 10px;
+  margin: 15px 0;
+}
+#input::placeholder {
+  color: rgb(255, 255, 255);
+}
+ul {
+  position: relative;
+  text-align: center;
+  font-size: 14px;
+}
+li {
+  background: rgb(242, 230, 0);
+  color: #333;
+  height: 40px;
+  border-radius: 50px;
+  margin: 15px 0;
+  padding: 10px;
+  list-style: none;
+  text-align: left;
+}
+li .fa-check,
+.fa-trash {
+  position: absolute;
+  cursor: pointer;
+}
+li .fa-check {
+  right: 40px;
+  color: green;
+}
+li .fa-trash {
+  right: 20px;
+  color: red;
+}
