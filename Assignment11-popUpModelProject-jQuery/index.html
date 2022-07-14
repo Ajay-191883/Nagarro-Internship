@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pop Up Modal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  </head>
+  <body class="bg-dark">
+    <div class="text-center mt-5">
+        <button class="clicks btn btn-warning">Click Me to see Popup</button>
+    </div>
+
+    <div class="container mt-5 " id="box">
+        <div class="icon-box"><i id="closeModal" class="fa fa-times"></i></div>
+        <div class="one">
+            <h3 class="text-center">Enter Details</h3>
+            <form action="#" class="">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" name="" id="username" class="form-control"> 
+                    <p id="usernameError" class="form-text text-danger m-0">
+                        Username should be of 3 to 10 characters
+                    </p>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="" id="email" class="form-control"> 
+                    <p id="emailError" class="form-text text-danger m-0">
+                        Email should be valid Email Address
+                    </p>
+                </div>
+                <div class="form-group text-center mt-3">
+                    <input type="button" value="Submit" 
+                    id="submit"
+                    class="btn btn-success">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="./script.js">
+        
+    </script>
+  </body>
+</html>
