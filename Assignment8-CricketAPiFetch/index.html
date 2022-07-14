@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cricket Series Information</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="bg-dark">
+    <div class="container mt-5 px-4 mw-100">
+      <h1 class="text-light text-center">Cricket Series Information</h1>
+      <div id="allData" class="row"></div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      let apiKey = "2bb33ab5-c767-4954-8f71-efc9c9527bfd";
+      let dataContainer = document.querySelector("#allData");
+
+      window.addEventListener("load", getFactFetch);
+
+      function getFactFetch() {
+        fetch(
+          "https://api.cricapi.com/v1/series?apikey=" + apiKey + "&offset=0"
+        )
+          .then((res) => res.json())
+          .then((data) => {
+            data.data.splice(0, 4).forEach((info) => {
+              let card = `
+              <div class="col mx-auto">
+          <div class="card bg-warning text-white mt-5 p-2">
+            <h3 class="text-danger text-center mb-3 ">${info.name}</h3>
+            <p class="text-center">From: <span class="text-danger">${info.startDate}</span> To: <span class="text-danger">${info.startDate}</span></p>
+            <div class="card-body p-0" id="fact">
+              <h5 class="card-title text-center">
+                Total Number of Matches <span>${info.matches}</span>
+              </h5>
+              <div class="row">
+                <div class="col-3">
+                  <p class="text-center">ODI</p>
+                  <p class="text-center">${info.odi}</p>
+                </div>
+                <div class="col-2">
+                  <p class="text-center">T20</p>
+                  <p class="text-center">${info.t20}</p>
+                </div>
+                <div class="col-3">
+                  <p class="text-center">TEST</p>
+                  <p class="text-center">${info.test}</p>
+                  </div>
+                  <div class="col-4">
+                    <p class="text-center">SQUADS</p>
+                    <p class="text-center">${info.squads}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+              `;
+              dataContainer.insertAdjacentHTML("beforeend", card);
+            });
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }
+    </script>
+  </body>
+</html>
