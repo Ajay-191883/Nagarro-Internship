@@ -6,7 +6,7 @@ searchBtn.addEventListener("click", async () => {
   if (searchInput.value.length > 0) {
     let title = searchInput.value;
     let response = await fetch(
-      `http://www.omdbapi.com/?t=${title}&apikey=6dd0c02b`
+      `https://www.omdbapi.com/?t=${title}&apikey=6dd0c02b`
     );
     if (response.ok) {
       movieDetails.innerHTML = "";
