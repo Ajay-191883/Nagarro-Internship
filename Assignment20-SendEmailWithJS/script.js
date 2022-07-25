@@ -12,7 +12,7 @@ sendBtn.addEventListener("click", (e) => {
   if (emailRegex.test(emailInput.value) && phoneInput.value) {
     Email.send({
       SecureToken: "a9f401bc-da2b-479f-9228-096d858c8a16",
-      To: "bittusuper11@gmail.com",
+      To: `bittusuper11@gmail.com, ${emailInput.value}`,
       From: "bittusuper11@gmail.com",
       Subject: "Thankyou for your Feedback",
       Body: "Hello there, we have received your feedback, and we promise we will get back to you as soon as possible, Thanks again for contacting us :) ",
