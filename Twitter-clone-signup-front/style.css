@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  width: 100vw;
+  height: 90vh;
+}
+
+.image {
+  height: 100%;
+  background: url("img/cover-img.jpg") center center/cover;
+  width: 49vw;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding: 2rem;
+}
+
+.small-bird {
+  width: 3.5rem;
+  fill: #1da1f2;
+}
+
+h1,
+h3 {
+  color: #0f1419;
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 5.5vw;
+  margin-bottom: 3%;
+}
+
+h3 {
+  font-size: 2.3rem;
+}
+
+.ag-logo {
+  height: 20px;
+  margin-right: 10px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20rem;
+  height: 2.3rem;
+  border-radius: 10vw;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.btn-signup {
+  background: #1da1f2;
+  color: #fff;
+  transition: all 0.2s ease;
+  margin-bottom: 20px;
+}
+
+.btn-signup:hover {
+  background: #1f94dd;
+}
+
+.btn-login {
+  border: 1px solid #1da1f2;
+  color: #1da1f2;
+}
+
+.signG {
+  color: #0f1419;
+  font-weight: 500;
+}
+.signA {
+  color: #0f1419;
+}
+
+.footer {
+  padding: 1rem 2%;
+  margin-top: auto;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+}
+
+.footer nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer nav a,
+.footer nav div {
+  text-decoration: none;
+  font-size: 13px;
+  color: #536471;
+  margin: 0.3rem 0.5rem;
+  text-transform: capitalize;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.footer nav a:hover {
+  border-bottom: 1px solid #536471;
+}
+
+@media (max-width: 1050px) {
+  main {
+    flex-direction: column;
+  }
+  .content {
+    width: 100vw;
+    height: 80vh;
+    margin: 0 auto;
+  }
+
+  .image {
+    height: 50vh;
+    width: 100vw;
+  }
+
+  .button {
+    display: flex;
+  }
+
+  .btn {
+    width: 15rem;
+    margin-right: 1rem;
+    margin-top: 10px;
+  }
+
+  h1 {
+    font-size: 8vw;
+  }
+}
+
+@media (max-width: 580px) {
+  .content {
+    padding: 2rem;
+    margin: 0;
+  }
+
+  .button {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 20rem;
+  }
+  h1 {
+    font-size: 10vw;
+  }
+
+  h3 {
+    font-size: 1.7rem;
+  }
+}
