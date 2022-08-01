@@ -49,6 +49,10 @@ a {
   justify-content: space-evenly;
 }
 
+.nav-link {
+  font-size: 0.9rem !important;
+}
+
 .nav-link.active {
   color: royalblue;
   padding-bottom: 10px;
