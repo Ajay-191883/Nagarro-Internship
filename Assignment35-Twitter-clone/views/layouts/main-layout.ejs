@@ -1,0 +1,91 @@
+<!-- Main-Layout File -->
+
+<!-- Variables needed to render the page -->
+<!-- pageTitle: For displaying page title -->
+<!-- htmlContent: For different things to be displayed on home, search, notifications etc. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <script
+      src="https://kit.fontawesome.com/7caf9c456e.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.11/cropper.min.css"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+
+    <title><%= pageTitle %></title>
+    <script>
+      const userLoggedIn = `<%- JSON.stringify(locals.userLoggedIn) %>`;
+    </script>
+  </head>
+  <body>
+    <div class="notificationsList"></div>
+    <nav class="navbar">
+      <a class="nav-link twitter-logo" href="/">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a class="nav-link <%= locals.home %>" href="/">
+        <i class="fas fa-home"> </i>Home
+      </a>
+      <a class="nav-link <%= locals.search %>" href="/search">
+        <i class="fas fa-search"> </i>Search
+      </a>
+      <a class="nav-link <%= locals.notifications %>" href="/notifications">
+        <span id="notificationsBadge">8</span>
+        <i class="fas fa-bell"> </i>Notifications
+      </a>
+      <a class="nav-link <%= locals.profile %>" href="/profile">
+        <i class="fas fa-user"> </i>Profile
+      </a>
+      <a class="nav-link <%= locals.logout %>" href="/logout">
+        <i class="fas fa-sign-out-alt"> </i>Logout
+      </a>
+    </nav>
+    <div class="content-container">
+      <h1 class="page-title"><%= pageTitle %></h1>
+      <%- locals.mainContent %>
+    </div>
+    <div class="highlights-container">
+      <div>
+        <h1 style="font-weight: 700">What's happening now!</h1>
+      </div>
+      <section>
+        <h3 style="font-size: 20px">
+          From 'Shamshera' to 'Sherdil': Watch these OTT titles this weekend
+        </h3>
+        <img
+          src="https://pbs.twimg.com/media/FamK3AzUcAA0faR?format=jpg&name=small"
+          alt=""
+        />
+        <p class="date">August 15, 2022</p>
+        <p>
+          Another weekend, another watchlist to keep you entertained! Until last
+          week, the OTT space boasted popular titles from Darlings to She-Hulk:
+          Attorney at Law and many more. This time around, a slew of
+          much-awaited releases have made their way to the OTT platforms.
+        </p>
+      </section>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script
+      src="https://cdn.socket.io/4.1.1/socket.io.min.js"
+      integrity="sha384-cdrFIqe3RasCMNE0jeFG9xJHog/tgOVC1E9Lzve8LQN1g5WUHo0Kvk1mawWjxX7a"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/javascript/showNotifications.js"></script>
+    <% locals.jsfiles.forEach(function(file) { %>
+    <script src="<%= file %> "></script>
+    <% }) %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.11/cropper.min.js"></script>
+    <script src="/javascript/clientSocket.js"></script>
+  </body>
+</html>
